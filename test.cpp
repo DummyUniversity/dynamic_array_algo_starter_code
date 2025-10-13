@@ -167,11 +167,11 @@ int test(char* str)
 		a.insert(8);
 
 		DynamicArray b(5, 5);
-		a.insert(1);
-		a.insert(3);
-		a.insert(5);
-		a.insert(7);
-		a.insert(9);
+		b.insert(1);
+		b.insert(3);
+		b.insert(5);
+		b.insert(7);
+		b.insert(9);
 
 		DynamicArray c = a.merge(b);
 		c.print();	//Should print 0 1 2 3 4 5 6 7 8 9
@@ -186,11 +186,11 @@ int test(char* str)
 		a.insert(8);
 
 		DynamicArray b(5, 5);
-		a.insert(1);
-		a.insert(3);
-		a.insert(5);
-		a.insert(7);
-		a.insert(9);
+		b.insert(1);
+		b.insert(3);
+		b.insert(5);
+		b.insert(7);
+		b.insert(9);
 
 		DynamicArray c = a.merge(b);
 		a.print();	//Should print 0 2 4 6 8
@@ -205,11 +205,11 @@ int test(char* str)
 		a.insert(8);
 
 		DynamicArray b(5, 5);
-		a.insert(1);
-		a.insert(3);
-		a.insert(5);
-		a.insert(7);
-		a.insert(9);
+		b.insert(1);
+		b.insert(3);
+		b.insert(5);
+		b.insert(7);
+		b.insert(9);
 
 		DynamicArray c = a.merge(b);
 		b.print();	//Should print 1 3 5 7 9
