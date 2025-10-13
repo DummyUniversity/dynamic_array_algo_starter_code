@@ -1,0 +1,242 @@
+name: Autograding Tests
+on:
+  - push
+  - workflow_dispatch
+  - repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: DA Algo 000
+      id: da-algo-000
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 000
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 000"
+        input: ''
+        expected-output: '0 1 2 3 4'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 001
+      id: da-algo-001
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 001
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 001"
+        input: ''
+        expected-output: '4 3 2 1 0'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 002
+      id: da-algo-002
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 002
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 002"
+        input: ''
+        expected-output: '0 1 2 3 4'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 003
+      id: da-algo-003
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 003
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 003"
+        input: ''
+        expected-output: '4 3 2 1 0'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 004
+      id: da-algo-004
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 004
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 004"
+        input: ''
+        expected-output: '0 1 2 3 4'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 005
+      id: da-algo-005
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 005
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 005"
+        input: ''
+        expected-output: '4 3 2 1 0'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 006
+      id: da-algo-006
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 006
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 006"
+        input: ''
+        expected-output: 'Correct'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 007
+      id: da-algo-007
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 007
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 007"
+        input: ''
+        expected-output: 'Correct'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 008
+      id: da-algo-008
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 008
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 008"
+        input: ''
+        expected-output: 'Correct'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 009
+      id: da-algo-009
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 009
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 009"
+        input: ''
+        expected-output: 'Correct'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 010
+      id: da-algo-010
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 010
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 010"
+        input: ''
+        expected-output: 'Correct'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 011
+      id: da-algo-011
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 011
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 011"
+        input: ''
+        expected-output: '0 2 4 3 1'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 012
+      id: da-algo-012
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 012
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 012"
+        input: ''
+        expected-output: 'Correct'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 013
+      id: da-algo-013
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 013
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 013"
+        input: ''
+        expected-output: '0 2 4 3 1'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 014
+      id: da-algo-014
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 014
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 014"
+        input: ''
+        expected-output: '0 1 2 3 4 5 6 7 8 9'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 015
+      id: da-algo-015
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 015
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 015"
+        input: ''
+        expected-output: '0 2 4 6 8'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: DA Algo 016
+      id: da-algo-016
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: DA Algo 016
+        setup-command: g++ main.cpp test.cpp da_algo.cpp -o a.out
+        command: "./a.out 016"
+        input: ''
+        expected-output: '1 3 5 7 9'
+        comparison-method: exact
+        timeout: 1
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        DA-Algo-000_RESULTS: "${{steps.da-algo-000.outputs.result}}"
+        DA-Algo-001_RESULTS: "${{steps.da-algo-001.outputs.result}}"
+        DA-Algo-002_RESULTS: "${{steps.da-algo-002.outputs.result}}"
+        DA-Algo-003_RESULTS: "${{steps.da-algo-003.outputs.result}}"
+        DA-Algo-004_RESULTS: "${{steps.da-algo-004.outputs.result}}"
+        DA-Algo-005_RESULTS: "${{steps.da-algo-005.outputs.result}}"
+        DA-Algo-006_RESULTS: "${{steps.da-algo-006.outputs.result}}"
+        DA-Algo-007_RESULTS: "${{steps.da-algo-007.outputs.result}}"
+        DA-Algo-008_RESULTS: "${{steps.da-algo-008.outputs.result}}"
+        DA-Algo-009_RESULTS: "${{steps.da-algo-009.outputs.result}}"
+        DA-Algo-010_RESULTS: "${{steps.da-algo-010.outputs.result}}"
+        DA-Algo-011_RESULTS: "${{steps.da-algo-011.outputs.result}}"
+        DA-Algo-012_RESULTS: "${{steps.da-algo-012.outputs.result}}"
+        DA-Algo-013_RESULTS: "${{steps.da-algo-013.outputs.result}}"
+        DA-Algo-014_RESULTS: "${{steps.da-algo-014.outputs.result}}"
+        DA-Algo-015_RESULTS: "${{steps.da-algo-015.outputs.result}}"
+        DA-Algo-016_RESULTS: "${{steps.da-algo-016.outputs.result}}"
+      with:
+        runners: da-algo-000, da-algo-001, da-algo-002, da-algo-003, da-algo-004, da-algo-005, da-algo-006, da-algo-007, da-algo-008, da-algo-009, da-algo-010, da-algo-011, da-algo-012, da-algo-013, da-algo-014, da-algo-015, da-algo-016
